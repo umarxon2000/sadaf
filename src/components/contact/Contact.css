@@ -1,0 +1,82 @@
+.contact_page {
+    width: 100%;
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact_page h2 {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #0E55AE;
+}
+
+.contact_page h2 span {
+    font-weight: 500;
+    color: #BD74A6;
+}
+
+.contact_page p {
+    width: 600px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.contact_page .contact_card_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.contact_services_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    border-right: 1px solid #E8E8E8;
+}
+
+.contact_services_container_border_none {
+    border-right: none;
+}
+
+.contact_services_container .contact_services_img_container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_services_img_container img {
+    width: 70px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.contact_services_container .contact_services_text_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.contact_services_text_container h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #111;
+}
+
+.contact_services_text_container span {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.contact_services_text_container .contact_services_text_span {
+    margin-top: 10px;
+}

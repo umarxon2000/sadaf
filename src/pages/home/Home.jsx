@@ -1,11 +1,25 @@
 import React from 'react'
 import './Home.css'
-import Navbar from '../../components/navbar/Navbar'
+import Booking from '../../components/booking/Booking'
+import Carousel from '../../components/carousel/Carousel'
+import Services from '../../components/services/Services'
+import PersentageCard from '../../components/persentagecard/PersentageCard'
+import BookAppointment from '../../components/bookappointment/BookAppointment'
+import Solution from '../../components/solution/Solution'
+import  Location  from '../../components/location/Location'
 
 function Home() {
   return (
     <div className='home'>
-     
+     <Carousel />
+     <Booking />
+     <Services />
+     <PersentageCard />
+     <BookAppointment />
+     <Solution />
+     <Location />
+
+
     </div>
   )
 }

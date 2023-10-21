@@ -1,6 +1,36 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  max-width: 1366px;
+  list-style: none;
+}
 
+
+
+/* body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+} */
+:root {
+  /* *colors */
+ 
+  --backgroundLight: #F2F2F2;
+  --buttonGrey: #0E54AE;
+  --colorOrange: #edbf91;
+  --decorationGrey: #566067;
+  --decorationLightestGrey: #e0e7ec;
+  --cardcolor:#BC74A5;
+  /* * font */
+  --colorDark: #1c1f22;
+  --colorWhite: #ffffff;
+  --titleFont: "Roboto Condensed", sans-serif;
+  --textFont: "Open Sans", sans-serif;
 }
 
 
