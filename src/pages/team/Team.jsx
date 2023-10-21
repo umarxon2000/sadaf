@@ -9,13 +9,11 @@ import Location from '../../components/location/Location'
 function Team() {
   return (
     <div >
-      <h1>team isomiddin va muhammdsoleh shu joyga </h1>
       <SadafOwner />
       <PersentageCard />
       <BookAppointment />
       <Contact />
       <Location />
-
     </div>
   )
 }
