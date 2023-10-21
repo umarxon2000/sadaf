@@ -7,10 +7,12 @@ import PersentageCard from '../../components/persentagecard/PersentageCard'
 import BookAppointment from '../../components/bookappointment/BookAppointment'
 import Solution from '../../components/solution/Solution'
 import  Location  from '../../components/location/Location'
+import Navbar from '../../components/navbar/Navbar'
 
 function Home() {
   return (
     <div className='home'>
+      <Navbar/>
      <Carousel />
      <Booking />
      <Services />
@@ -18,8 +20,6 @@ function Home() {
      <BookAppointment />
      <Solution />
      <Location />
-
-
     </div>
   )
 }

@@ -6,6 +6,9 @@
   text-decoration: none;
   max-width: 1366px;
   list-style: none;
+  box-sizing: border-box;
+
+
 }
 
 

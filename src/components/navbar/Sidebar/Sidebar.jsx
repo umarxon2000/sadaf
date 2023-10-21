@@ -1,50 +1,36 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import navLogo from "./denticare-logo.png";
-import Sidebar from "./Sidebar/Sidebar";
-import "./Navbar.css";
+import { IoMdClose } from "react-icons/io";
+import "./Sidebar.css";
+import navLogo from "../denticare-logo.png";
 // ======== ICON IMPORTs  ========= \\
 import {
   LiaPhoneVolumeSolid,
   LiaFacebookF,
   LiaTelegramPlane,
-  LiaBarsSolid,
 } from "react-icons/lia";
 import { LuCalendarClock, LuInstagram } from "react-icons/lu";
 import { BsFillBagPlusFill } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 
-function Navbar() {
-  const [openSidebar, setOpenSidebar] = useState(false);
-  function openSidebarFunc() {
-    setOpenSidebar(true);
-  }
-  function closeSidebarFunc() {
-    setOpenSidebar(false);
-  }
-  openSidebar
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
-
+function Sidebar({ closeSidebarFunc }) {
   return (
-    <div className="Navbar">
-      {openSidebar && <Sidebar closeSidebarFunc={closeSidebarFunc} />}
-      {/*======== NAVBAR__TOP ======= */}
-      <div className="navbar__top">
-        <div className="navbar__top__left">
-          <LiaBarsSolid onClick={openSidebarFunc} className="bar__icon" />
-          <Link to={"/"} className="navbar__logo">
+    <>
+      <div className="Sidebar">
+        <div className="sidebar__head">
+          <Link to={"/"} className="sidebar__logo">
             <img src={navLogo} alt="Logo" />
           </Link>
+          <IoMdClose className="sidebarClose" onClick={closeSidebarFunc} />
         </div>
-        <div className="navbar__top__right">
-          <a className="navbar__call" href="tel:+998932620323">
+        {/*======== SIDEBAR TOP ======= */}
+        <div className="sidebar__top">
+          <a className="sidebar__call" href="tel:+998932620323">
             <LiaPhoneVolumeSolid className="call__icon" />
             <span>
               +998(93)xxxxxxx <small>24/7 Emergency Phone</small>
             </span>
           </a>
-          <div className="working__days">
+          <div className="sidebar__working__days">
             <LuCalendarClock />
             <span>
               Monday-Friday
@@ -54,19 +40,17 @@ function Navbar() {
             </span>
           </div>
         </div>
-      </div>
-      {/*========= NAVBAR__BOTTOM ======== */}
-      <div className="navbar__bottom">
-        {/*  NAVBAR LINKS */}
-        <div className="nav__links">
+        {/*  SIDEBAR LINKS */}
+        <div className="sidebar__links">
           <Link to={"/about"}>About</Link>
           <Link to={"/"}>Services</Link>
           <Link to={"/"}>Pages</Link>
           <Link to={"/"}>News</Link>
           <Link to={"/"}>Shop</Link>
         </div>
-        <div className="nav__bottom__right">
-          {/* NAVBAR NETWORKS */}
+        {/*========= SIDEBAR BOTTOM ======== */}
+        <div className="sidebar__bottom">
+          {/* SIDEBAR NETWORKS */}
           <div className="navbar__networks">
             <a href="https://instagram.com">
               <LuInstagram />
@@ -88,9 +72,9 @@ function Navbar() {
           </div>
         </div>
       </div>
-      {/* <div onClick={closeSidebarFunc} className="overlay"></div> */}
-    </div>
+      <div onClick={closeSidebarFunc} className="overlay"></div>
+    </>
   );
 }
 
-export default Navbar;
+export default Sidebar;
