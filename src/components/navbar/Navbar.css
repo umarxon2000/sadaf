@@ -207,9 +207,10 @@ svg {
   .navbar__bottom {
     display: none;
   }
-  .navbar__top__left{
+  .navbar__top__left {
     width: 100%;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0 3%;
   }
 }
