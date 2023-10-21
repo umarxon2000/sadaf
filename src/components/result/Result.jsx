@@ -1,79 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import './Result.css'
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { SlLike } from 'react-icons/sl'
 
 function Result() {
-  const [progress, setProgress] = useState(1);
+  const INtervention = 97;
+  const clientStatification = 99
+  const happyWithStaff = 100
+  const quickRecovery = 95
 
-  useEffect(() => {
-    const progressLoop = setTimeout(() => {
-      setProgress((prevProgress) => {
-        const newProgress = prevProgress + 0.01;
-        return newProgress.toFixed(2);
-      });
-    }, 600);
 
-    return () => clearTimeout(progressLoop);
-  }, []);
+
   return (
     <div className='result'>
-      <main>
-        <div className="loader" data-running={progress < 1}>
-          <div className="loader__fill-glow"></div>
-          <div className="loader__fill" style={{ '--progress': progress }}></div>
-          <div className="loader__middle">
-            <div className="loader__value">
-              <div data-value>
-                {Math.round(progress * 100)}
-                %</div>
-            </div>
-          </div>
+      <div className="result_top">
+        <h3>
+          Our Dental Service</h3>
+        <h1>In  Numbers</h1>
+        <p>Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change. Seamlessly underwhelm optimal testing processes.</p>
+      </div>
+      <div className="circular_result">
+
+        <div className="circular_item">
+          <CircularProgressbarWithChildren value={clientStatification} strokeWidth={4} className='Rounded'>
+          </CircularProgressbarWithChildren>
+
+          <h1>{clientStatification} <strong>%</strong></h1>
+          <h1>clientStatification</h1>
         </div>
-        <button type="button" onClick={() => setProgress(1)}>Replay</button>
-      </main>
-      <section className='container'>
-          <div className="card">
-            <div className="box">
-              <div className="percent">
-                <svg>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                </svg>
-              </div>
-              <div className="numbers">
-                <h1>90 <span>%</span> </h1>
-              </div>
-            </div>
-            <div className="text">html</div>
-          </div>
-          <div className="card">
-            <div className="box">
-              <div className="percent">
-                <svg>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                </svg>
-              </div>
-              <div className="numbers">
-                <h1>82 <span>%</span> </h1>
-              </div>
-            </div>
-            <div className="text">css</div>
-          </div>
-          <div className="card">
-            <div className="box">
-              <div className="percent">
-                <svg>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                  <circle cx={70} cy={70} r={70} ></circle>
-                </svg>
-              </div>
-              <div className="numbers">
-                <h1>60 <span>%</span> </h1>
-              </div>
-            </div>
-            <div className="text">javascript</div>
-          </div>
-      </section>
+        <div className="circular_item">
+          <CircularProgressbarWithChildren value={INtervention} strokeWidth={4} className='Rounded'>
+          </CircularProgressbarWithChildren>;
+          <h1>{INtervention} <strong>%</strong></h1>
+          <h1>INtervention</h1>
+        </div>
+        <div className="circular_item">
+          <CircularProgressbarWithChildren value={happyWithStaff} strokeWidth={4} className='Rounded'>
+          </CircularProgressbarWithChildren>;
+          <h1>{happyWithStaff} <strong>%</strong></h1>
+          <h1>happyWithStaff</h1>
+        </div>
+        <div className="circular_item">
+          <CircularProgressbarWithChildren value={quickRecovery} strokeWidth={4} className='Rounded'>
+          </CircularProgressbarWithChildren>;
+          <h1>{quickRecovery} <strong>%</strong></h1>
+          <h1>quickRecovery</h1>
+        </div>
+      </div>
     </div>
   )
 }
